@@ -28,11 +28,23 @@
     font-family: Tinos;
     src: url(Tinos-Regular.ttf);
 }
+
+@font-face {
+    font-family: PixelOperator;
+    src: url(PixelOperator.ttf);
+}
+
+@font-face {
+    font-family: PixelOperator;
+    src: url(PixelOperator-Bold.ttf);
+    font-weight: bold;
+}
   
 
 @theme {
     --font-heading: "WindsorOpti-LightCondensed", "serif";
     --font-body: "Tinos", "serif";
+    --font-pixel: "PixelOperator", "mono";
 }
 
 h1 {

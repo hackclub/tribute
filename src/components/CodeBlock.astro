@@ -1,0 +1,16 @@
+---
+const { file } = Astro.props;
+import { Code } from 'astro:components';
+
+const { code, lang } = Astro.props;
+
+---
+<div class = {`my-5 rounded-sm bg-white border border-black h-max`}>
+    <div class = "px-2 border-b w-full border-b-black flex h-max flex-row !font-pixel">
+    {file}
+    </div>
+
+    <div class = "w-full h-full !font-mono !text-base">
+        <Code class="px-2" code={code} lang={lang} theme="everforest-light" wrap/>
+    </div>
+</div>

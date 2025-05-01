@@ -1,0 +1,19 @@
+---
+interface Props {
+    windowName: string;
+    className?: string;
+    subClassName?: string;
+}
+const { windowName, className, subClassName } = Astro.props;
+---
+
+<div class = {`my-4 rounded-sm bg-white border border-black h-96 flex flex-col items-center ${className} relative`}>
+    <div class = "top-0 h-12 px-2 border-b w-full border-b-black flex flex-row items-center align-middle gap-2">
+        ←→⟳ 
+        <span class = "rounded-lg border border-black p-1 grow text-sm">{windowName}</span>
+        <span class="ml-auto">{'×'}</span>
+    </div>  
+    <div class={subClassName}>
+        <slot/> 
+    </div>
+</div>
