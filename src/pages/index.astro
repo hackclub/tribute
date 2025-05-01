@@ -1,5 +1,5 @@
 ---
-
+import Layout from "../layouts/Layout.astro"
 ---
 
 <html lang="en">
@@ -8,9 +8,78 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>tribute</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Layout headings =
+		{[
+			{ text: 'what to make',       slug: 'make',       depth: 2 },
+			{ text: 'how to make it',         slug: 'how',         depth: 2 },
+			{ text: 'Another Sub Heading', slug: 'another-sub-heading', depth: 3 },
+			{ text: 'Second Heading',      slug: 'second-heading',      depth: 2 },
+			{ text: 'making your website real',        slug: 'deploying',        depth: 2 },
+		]} content = {
+			{"title": "leave your mark on the world"}
+		}>	
+
+		Long ago, or not really long ago, it was common for people to make <i>personal websites</i>.
+		
+		<p>It took Orpheus the dinosaur a long time to make one of her own, possibly because she doesn't have fingers :( (She will not confirm or deny whether it was actually a Tumblr blog dedicated to posting fanfiction and raccoon memes. But hey, no judgement.)</p>
+		
+		<p>In this day and age, spaces like these are becoming less common. Orpheus is here to help you <strike>embrace cringe</strike> build a fanpage dedicated towards something you really, really like - like a tribute!</p> 
+	
+
+		<p>You'll learn:</p>
+		<ul class = "*:flex *:flex-row *:gap-2">
+			<li><input type = "checkbox" disabled/>What to make your website about</li>
+			<li><input type = "checkbox" disabled/>How to make it look nice</li>
+			<li><input type = "checkbox" disabled/>How to publish it for other people</li>
+		</ul>
+
+		<p>And if you're completing this as part of the <a target = "_blank" href = "https://athena.hackclub.com/award">Athena Award</a>, you'll gain some Artifacts from completing it!</p>
+
+		<section>
+			<h2 id = "make">what to make?</h2>
+			<p>Think about something you really enjoy. A TV show, or a video game, a book, an artist, or even food.</p>
+			<p>Personally, Orpheus really likes playing this video game called <a target="_blank" href = "https://en.wikipedia.org/wiki/Undertale">Undertale</a>. She wants to show you how you can make your own cool website for something you like.</p>
+
+
+			<p>Consider <span class = "font-bold">what's special</span> about your chosen topic and how you could apply it to a website. Specifically, things like:</p>
+
+			<ul class="list-inside list-disc">
+				<li>Fonts?</li>
+				<li>Theme/colour scheme?</li>
+				<li>Music and audio?</li>
+			</ul>
+
+			<p>If it's a game, think about what the in-game menus and interface look like. If it's a book, think about the front cover. If it's an artist or band, think about what their albums look like.</p>
+			
+			<p>Don't restrict yourself to what you think a normal website might look like. Be creative! Orpheus really likes the sites on <a target = "_blank" href= "https://neocities.org/browse">Neocities</a>, for instance.</p>
+		</section>
+
+
+		<section>
+			<h2 id = "how">how to make it</h2>
+			<p>Now that you have an idea, how do you actually turn it into a website?</p>
+			<p>There are many ways, but they all boil down to the very basics of <span class = "font-bold">HTML and CSS</span>.</p>
+		</section>
+
+
+		<section>
+			<h2 id="deploying">making your website real</h2>
+			<p>It makes Orpheus really sad when she clicks on a link and sees this:</p>
+			<div class = "my-4 rounded-sm bg-white border border-black h-96 flex flex-col items-center justify-center relative p-4">
+				<div class = "absolute px-2 top-0 h-12 border-b w-full border-b-black flex flex-row items-center align-middle gap-2">
+					←→⟳ 
+					<span class = "rounded-lg border border-black p-1 grow text-sm">dinosaurbbq.com</span>
+					<span class="ml-auto">{'×'}</span></div>
+				<p class = "!sm:text-4xl !text-8xl">404</p>
+				<p class = "!text-base">page not found! this website was probably deleted.</p>
+			</div>
+			<p>Someone probably put a lot of effort into making it, right? And now it's nothing...</p>
+		</section>
+
+
+		</Layout>
 	</body>
 </html>

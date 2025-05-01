@@ -1,0 +1,63 @@
+---
+import './src/styles/global.css' 
+import TableOfContents from '../components/TableOfContents.astro';
+import Heading from '../components/Heading.astro';
+export interface Props {
+  content: {
+    title: string;
+  },
+  headings: {
+    slug: string;
+    text: string;
+    depth: number;
+  }[]
+}
+
+const {
+  content: { title },
+  headings
+} = Astro.props;
+---
+
+
+<main class="p-10 min-h-screen w-screen">
+    <div class = "grid grid-cols-5 gap-10 min-h-screen">
+
+        <div class = "hidden md:inline col-span-1">
+        {headings && headings.length > 0 && (
+            <nav class="fixed h-full">
+              <p class = "font-bold">Table of Contents</p>
+              <TableOfContents headings={headings} />
+            </nav>
+          )}</div>
+          
+        <div class = "col-span-full md:col-span-4 lg:col-span-3 overflow-scroll">
+            <Heading/>
+            <div class = "py-8">
+                <h2 class = "py-4">{title}</h2>
+                <div class = "font-body">
+                    <slot/>
+                </div>
+            </div>
+        </div>
+
+        <div class = "hidden lg:inline *:hidden *:lg:inline col-span-1 relative">
+          <nav class="fixed top-1/2 -translate-y-1/2 border max-w-full">
+              <div class = "!p-5 !w-full h-max flex flex-col justify-center items-center">
+                <img 
+                    src = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/6b49266031347b5fe3531e378218497f1d367d8a_b7edc1ebc8c5c4ee111bc087627ac997aa733682_image.png"
+                    class = "object-cover aspect-square w-48 border border-black"/>
+                    <div class = "py-4 *:text-center">
+                      <p>orpheus' awesome blog</p> 
+                      <p class = "italic">(this user follows you)</p>
+                      <div class = "flex flex-row gap-4 justify-center">
+                        <a href = "https://hackclub.com">follow</a>
+                        <a href = "https://hackclub.com/slack">message</a>
+                  </div>
+
+                </div>
+          </div>
+          </nav>
+
+        </div>
+</main>
