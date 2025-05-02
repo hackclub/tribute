@@ -2,67 +2,82 @@
 
 @font-face {
     font-family: WindsorOpti-LightCondensed;
-    src: url(WindsorOpti-LightCondensed.otf);
+    src: url(/fonts/WindsorOpti-LightCondensed.otf) format("opentype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: Tinos;
-    src: url(Tinos-Bold.ttf);
+    src: url(/fonts/Tinos-Bold.ttf) format("truetype");
     font-weight: bold;
+    font-display: swap;
+
 }
 
 @font-face {
     font-family: Tinos;
-    src: url(Tinos-Italic.ttf);
+    src: url(/fonts/Tinos-Italic.ttf) format("truetype");
     font-style: italic;
+    font-display: swap;
+
 }
 
 @font-face {
     font-family: Tinos;
-    src: url(Tinos-BoldItalic.ttf);
+    src: url(/fonts/Tinos-BoldItalic.ttf) format("truetype");
     font-weight: bold;
     font-style: italic;
+    font-display: swap;
+
 }
 
 @font-face {
     font-family: Tinos;
-    src: url(Tinos-Regular.ttf);
+    src: url(/fonts/Tinos-Regular.ttf) format("truetype");
+    font-display: swap;
+
 }
 
 @font-face {
     font-family: PixelOperator;
-    src: url(PixelOperator.ttf);
+    src: url(/fonts/PixelOperator.ttf) format("truetype");
+    font-display: swap;
+
 }
 
 @font-face {
     font-family: PixelOperator;
-    src: url(PixelOperator-Bold.ttf);
+    src: url(/fonts/PixelOperator-Bold.ttf) format("truetype");
     font-weight: bold;
+    font-display: swap;
+
 }
   
 
 @theme {
-    --font-heading: "WindsorOpti-LightCondensed", "serif";
-    --font-body: "Tinos", "serif";
-    --font-pixel: "PixelOperator", "mono";
+    --font-heading: WindsorOpti-LightCondensed, "serif";
+    --font-body: Tinos, "serif";
+    --font-pixel: PixelOperator, "mono";
 }
 
-h1 {
-    @apply font-heading;
-}
+@layer base {
+    h1 {
+        @apply font-heading;
+    }
 
-h2 {
-    @apply font-heading text-3xl md:text-5xl;
-}
+    h2 {
+        @apply font-heading text-3xl md:text-5xl;
+    }
 
-h3 {
-    @apply font-heading;
-}
+    h3 {
+        @apply font-heading;
+    }
 
-p, div {
-    @apply font-body text-lg md:text-xl py-2;
-}
+    p, div {
+        @apply font-body text-lg md:text-xl py-2;
+    }
 
-a {
-    @apply text-emerald-600 underline underline-offset-4 hover:decoration-wavy
+    a {
+        @apply text-emerald-600 underline underline-offset-4 hover:decoration-wavy
+    }
 }
