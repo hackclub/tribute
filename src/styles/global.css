@@ -52,7 +52,7 @@ h1 {
 }
 
 h2 {
-    @apply font-heading text-5xl py-4;
+    @apply font-heading text-3xl md:text-5xl;
 }
 
 h3 {
@@ -60,7 +60,7 @@ h3 {
 }
 
 p, div {
-    @apply font-body text-xl py-2;
+    @apply font-body text-lg md:text-xl py-2;
 }
 
 a {

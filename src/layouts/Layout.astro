@@ -19,15 +19,18 @@ const {
 } = Astro.props;
 ---
 
-
-<main class="p-10 min-h-screen w-screen">
+<main class="p-10 min-h-screen w-screen bg-[url(bg.svg)] relative">
     <div class = "grid grid-cols-5 gap-10 min-h-screen">
-
         <div class = "hidden md:inline col-span-1">
         {headings && headings.length > 0 && (
-            <nav class="fixed h-full">
-              <p class = "font-bold">Table of Contents</p>
-              <TableOfContents headings={headings} />
+            <nav class="fixed h-full flex flex-col">
+              <img alt = "A bouncing pagedoll of Yippee Orpheus" class = "max-w-1/2" src = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/4ec54533d119d90d8ac2e753284783c8aced4d28_image.png"/>
+              <div class = "my-6">
+                <p class = "font-bold !font-heading">Table of Contents</p>
+                <TableOfContents headings={headings} />
+              </div>
+              <img class = "fixed -bottom-20 size-40 animate-bounce hover:animate-none hover:-bottom-5 hover:scale-110 transition-all duration-300" src = "https://cloud-n807bcpij-hack-club-bot.vercel.app/10318016-8380173-super-matte-5000-uncoated-vinyl-stickers_11.png"/>
+
             </nav>
           )}</div>
           
@@ -42,11 +45,11 @@ const {
         </div>
 
         <div class = "hidden lg:inline *:hidden *:lg:inline col-span-1 relative">
-          <nav class="fixed top-1/2 -translate-y-1/2 border max-w-full">
-              <div class = "!p-5 !w-full h-max flex flex-col justify-center items-center">
+          <div class="fixed top-1/2 -translate-y-1/2 bg-white">
+              <div class = "border !p-5 h-max flex flex-col justify-center items-center">
                 <img 
                     src = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/6b49266031347b5fe3531e378218497f1d367d8a_b7edc1ebc8c5c4ee111bc087627ac997aa733682_image.png"
-                    class = "object-cover aspect-square w-48 border border-black"/>
+                    class = "object-cover aspect-square w-36 border border-black"/>
                     <div class = "py-4 *:text-center">
                       <p>orpheus' awesome blog</p> 
                       <p class = "italic">(this user follows you)</p>
@@ -54,10 +57,16 @@ const {
                         <a href = "https://hackclub.com">follow</a>
                         <a href = "https://hackclub.com/slack">message</a>
                   </div>
-
-                </div>
+              </div>
+            </div>
+          
+          <div class = "border-x border-b p-5 w-full flex flex-col items-center">
+            <audio controls class = "w-48 bg-white border border-black rounded-full">
+              <source src = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/181832e866502ffe2d6964fd39615596f590e6ee_youtube_ehh_52fzstw_1920x1080_h264__mp3cut.net__audio.mp4"/>
+            </audio>
+            <span class = "text-base">RAN AWAY ft. Heather</span>
+            <span class = "uppercase text-xs font-sans">HACK CLUB</span>
           </div>
-          </nav>
-
+        </div>
         </div>
 </main>
