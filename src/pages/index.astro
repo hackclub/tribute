@@ -157,28 +157,32 @@ import Section from '../components/Section.astro';
 		</span>
 
 		<Window windowName="localhost:8000" subClassName="w-full h-full bg-cover bg-white/50 bg-blend-lighten bg-[url(https://hc-cdn.hel1.your-objectstorage.com/s/v3/af857230618e629f4fba73efb8c3cb45a9fd9f3d_image.png)]">
-			<div class = "flex flex-row flex-wrap">
-			<div class = "flex flex-col justify-around *:w-1/2">
-			<div class = "bg-[#F3F3EC] p-5 m-5">
-			<span class = "font-sans text-[#A1877E] font-semibold tracking-[0.3em] flex flex-row justify-between">
-				<span class = "uppercase">Hack Club</span>
-				<span>orpheus</span>
-			</span>
-			<div class = "flex flex-row justify-between">
-				<div class = "p-4 w-max border border-white bg-[#CEE7EB]"/>
-				<div class = "p-4 w-max border border-white bg-[#F7F3DB]"/>
-				<div class = "p-4 w-max border border-white bg-[#FAE475]"/>
-				<div class = "p-4 w-max border border-white bg-[#D9AF65]"/>
-				<div class = "p-4 w-max border border-white bg-[#D99BB3]"/>
-			</div>
-			</div>
+			<div class = "flex flex-row flex-wrap p-3 *:w-full *:basis-1/3 *:grow gap-3 *:font-sans *:text-[#A1877E]">
 
-			<div class = "bg-[#F3F3EC] p-5 m-5 font-sans text-black/70 text-base">
-				Hi :3 I'm Orpheus, and this is my website.
-				I'm a dinosaur! Lorem ipsum dolor sit amet.
-			</div>
+			<div class = "flex flex-col h-full gap-5 justify-between">
+				<div class = "bg-[#F3F3EC] p-5">
+				<span class = "font-sans text-[#A1877E] font-semibold tracking-[0.3em] flex flex-row justify-between">
+					<span class = "uppercase">Hack Club</span>
+					<span>orpheus</span>
+				</span>
+				<div class = "flex flex-row justify-between">
+					<div class = "p-4 w-max border border-white bg-[#CEE7EB]"/>
+					<div class = "p-4 w-max border border-white bg-[#F7F3DB]"/>
+					<div class = "p-4 w-max border border-white bg-[#FAE475]"/>
+					<div class = "p-4 w-max border border-white bg-[#D9AF65]"/>
+					<div class = "p-4 w-max border border-white bg-[#D99BB3]"/>
+				</div>
+				</div>
+
+				<div class = "bg-[#F3F3EC] p-5 font-sans text-black/70 text-base">
+					Hi :3 I'm Orpheus, and this is my website.
+					I'm a dinosaur! Lorem ipsum dolor sit amet.
+				</div>
 		</div>
-		<div class = "bg-[#F3F3EC]"></div>
+		<div class = "flex-1 flex flex-col">
+			<div class = "bg-[#F3F3EC] p-5 ">Here's a small demo themed after </div>
+		<img class = "h-36 mx-auto my-auto bg-black/50" src = "https://cloud-d8b6vbwjs-hack-club-bot.vercel.app/1dinosaur_holding_rubber_duck.png"/>
+		</div>
 		</div>
 		</Window>
 	</Section>
@@ -202,12 +206,10 @@ import Section from '../components/Section.astro';
 				<img alt = "Publishing a static website on GitHub pages." src = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/7536c8f13683b7788d18c20e1469c56a8571a694_vert_gif.gif"/>
 			</ul>
 			<h2 class = "my-2">You're done!</h2>
-			<p>Congratulations on finishing Tribute, the first guided You-Ship-We-Ship project in the Athena Award. Submit your project on the <a target = "_blank" href = "https://athena.hackclub.com/awards">Athena Award</a> website to earn a special sticker and some Artifacts.</p>
+			<p>Congratulations on finishing Tribute, the first guided You-Ship-We-Ship project in the Athena Award. Submit your project <a target = "_blank" href = "https://forms.hackclub.com/athena-award-projects?project=tribute">here</a> to earn a special sticker and some Artifacts.</p>
 			<p>If you feel confident, you can move on and start your own project that builds on what you learned here.</p>
 			<p>If not - no worries! You can start Express, the second guided You-Ship-We-Ship project in the Athena Award.</p>
 		</Section>
-
-
 		</Layout>
 	</body>
 </html>
